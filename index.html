@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Akshay Kumar Reddy Polu </title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <link rel="icon" href="Logo.png" type="image/png" />.
+  <style>
+  .animate-pop {
+    animation: pop 0.6s ease-out forwards;
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  @keyframes pop {
+    to {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  .scroll-zoom {
+    opacity: 0;
+    transform: scale(0.9);
+    transition: all 0.6s ease;
+  }
+
+  .scroll-zoom.visible {
+    opacity: 1;
+    transform: scale(1);
+  }
+   
+
+  .fade-in { animation: fade 1s ease-out forwards; opacity: 0; }
+  @keyframes fade { to { opacity: 1; } }
+
+  .slide-left { animation: slideLeft 0.7s ease-out forwards; transform: translateX(-50px); opacity: 0; }
+  @keyframes slideLeft { to { transform: translateX(0); opacity: 1; } }
+
+  .slide-right { animation: slideRight 0.7s ease-out forwards; transform: translateX(50px); opacity: 0; }
+  @keyframes slideRight { to { transform: translateX(0); opacity: 1; } }
+
+  .slide-up { animation: slideUp 0.7s ease-out forwards; transform: translateY(50px); opacity: 0; }
+  @keyframes slideUp { to { transform: translateY(0); opacity: 1; } }
+
+  .slide-down { animation: slideDown 0.7s ease-out forwards; transform: translateY(-50px); opacity: 0; }
+  @keyframes slideDown { to { transform: translateY(0); opacity: 1; } }
+
+  .zoom-in { animation: zoomIn 0.6s ease-out forwards; transform: scale(0.8); opacity: 0; }
+  @keyframes zoomIn { to { transform: scale(1); opacity: 1; } }
+</style>
+
+</head>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+<body class="bg-gradient-to-br from-gray-900 via-black to-gray-900 text-white">
+<body class="relative bg-gradient-to-br from-[#0f172a] via-[#1e293b] to-[#0f172a] text-white overflow-hidden">
+<body class="relative text-white scroll-smooth overflow-x-hidden">
+
+  <!-- 🌌 Background Video -->
+  <video autoplay muted loop playsinline class="fixed top-0 left-0 w-full h-full object-cover z-[-2]">
+    <source src="Back.mp4" type="video/mp4" />
+     
+  </video>
+
+  <!-- 🌑 Overlay for contrast -->
+  <div class="absolute inset-0 bg-black/60 backdrop-blur-sm z-[-1]"></div>
+
+
+<!-- 🌌 Optional Overlay -->
+<div class="absolute inset-0 bg-black/60 z-0"></div>
+
+<!-- 🌟 Particle Effect Background Layer -->
+<div id="particles-js" class="absolute inset-0 z-[-1]"></div>
+
+<!-- 💡 Dark/Light Mode Switch -->
+<div class="fixed top-4 right-4 z-50">
+  <button id="toggle-theme" class="bg-cyan-400 text-black px-3 py-1 rounded shadow hover:bg-cyan-300 transition">
+  </button>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    particlesJS("particles-js", {
+      particles: {
+        number: { value: 40 },
+        color: { value: "#00ffff" },
+        shape: { type: "circle" },
+        opacity: { value: 0.2 },
+        size: { value: 3 },
+        move: { enable: true, speed: 1.5, direction: "none" }
+      },
+      interactivity: {
+        events: { onhover: { enable: true, mode: "repulse" } }
+      }
+    });
+
+    const toggleBtn = document.getElementById("toggle-theme");
+    toggleBtn.addEventListener("click", () => {
+      document.body.classList.toggle("dark");
+      document.body.classList.toggle("light");
+    });
+  });
+</script>
+
+<style>
+  html {
+    scroll-behavior: smooth;
+  }
+
+  html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  @media (max-width: 768px) {
+    body {
+      background-size: contain;
+    }
+  }
+
+  .dark {
+    background: linear-gradient(to right, #0f172a, #1e293b);
+    color: white;
+  }
+
+  .light {
+    background: linear-gradient(to right, #f0faff, #dbeafe);
+    color: #1e293b;
+  }
+</style>
+
+<!-- 🌐 Navigation -->
+<nav id="navbar" class="fixed top-0 w-full z-50 bg-black/50 backdrop-blur-md shadow-md transition-all duration-300">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+    
+  <!-- ✅ Logo in Left Corner -->
+<a href="#" class="flex items-center">
+  <img src="Logo A.png" alt="Akshay Reddy Logo" class="h-16 w-auto object-contain" />
+</a>
+
+
+
+    <!-- Hamburger Icon for Mobile -->
+    <button id="menu-btn" class="md:hidden text-cyan-400 text-2xl focus:outline-none">
+      <i class="fas fa-bars"></i>
+    </button>
+
+    <!-- Desktop Navigation Links -->
+    <ul id="nav-links" class="hidden md:flex gap-6 text-sm font-medium text-white">
+      <li><a href="#" class="nav-link"><i class="fas fa-home text-cyan-300 mr-1"></i>Home</a></li>
+      <li><a href="#about" class="nav-link"><i class="fas fa-user text-cyan-300 mr-1"></i>About</a></li>
+      <li><a href="#skills" class="nav-link"><i class="fas fa-laptop-code text-cyan-300 mr-1"></i>Skills</a></li>
+      <li><a href="#education" class="nav-link"><i class="fas fa-graduation-cap text-cyan-300 mr-1"></i>Education</a></li>
+      <li><a href="#experience" class="nav-link"><i class="fas fa-briefcase text-cyan-300 mr-1"></i>Experience</a></li>
+      <li><a href="#projects" class="nav-link"><i class="fas fa-project-diagram text-cyan-300 mr-1"></i>Projects</a></li>
+      <li><a href="#contact" class="nav-link"><i class="fas fa-envelope text-cyan-300 mr-1"></i>Contact</a></li>
+    </ul>
+  </div>
+
+  <!-- Mobile Menu -->
+  <ul id="mobile-menu" class="md:hidden hidden flex-col px-6 pb-4 text-sm font-medium text-white bg-black/80 backdrop-blur-lg">
+    <li class="py-2"><a href="#" class="nav-link">Home</a></li>
+    <li class="py-2"><a href="#about" class="nav-link">About</a></li>
+    <li class="py-2"><a href="#skills" class="nav-link">Skills</a></li>
+    <li class="py-2"><a href="#education" class="nav-link">Education</a></li>
+    <li class="py-2"><a href="#experience" class="nav-link">Experience</a></li>
+    <li class="py-2"><a href="#projects" class="nav-link">Projects</a></li>
+    <li class="py-2"><a href="#contact" class="nav-link">Contact</a></li>
+  </ul>
+</nav>
+
+
+<!-- 🌌 Particle Background -->
+<div id="particles-js" class="absolute inset-0 z-[-1]"></div>
+
+<!-- ✅ Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    // Init particles
+    particlesJS("particles-js", {
+      particles: {
+        number: { value: 40 },
+        color: { value: "#00ffff" },
+        shape: { type: "circle" },
+        opacity: { value: 0.2 },
+        size: { value: 3 },
+        move: { enable: true, speed: 1.5 }
+      },
+      interactivity: {
+        events: { onhover: { enable: true, mode: "repulse" } }
+      }
+    });
+
+    // Mobile Toggle
+    const toggleBtn = document.getElementById("mobile-toggle");
+    const mobileMenu = document.getElementById("mobile-menu");
+    const icon = document.getElementById("toggle-icon");
+
+    toggleBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+      icon.classList.toggle("fa-bars");
+      icon.classList.toggle("fa-times");
+    });
+
+    // Auto-close on mobile link click
+    document.querySelectorAll("#mobile-menu a").forEach(link => {
+      link.addEventListener("click", () => {
+        mobileMenu.classList.add("hidden");
+        icon.classList.remove("fa-times");
+        icon.classList.add("fa-bars");
+      });
+    });
+
+    // Scroll shadow
+    const navbar = document.getElementById("navbar");
+    window.addEventListener("scroll", () => {
+      navbar.classList.toggle("shadow-lg", window.scrollY > 50);
+    });
+
+    // Active section highlight
+    const navLinks = document.querySelectorAll(".nav-link");
+    const sections = document.querySelectorAll("section[id]");
+    window.addEventListener("scroll", () => {
+      const scrollY = window.scrollY + 100;
+      sections.forEach(section => {
+        const offsetTop = section.offsetTop;
+        const offsetHeight = section.offsetHeight;
+        if (scrollY >= offsetTop && scrollY < offsetTop + offsetHeight) {
+          navLinks.forEach(link => link.classList.remove("text-cyan-400", "font-bold"));
+          const activeLink = document.querySelector(`a[href="#${section.id}"]`);
+          if (activeLink) activeLink.classList.add("text-cyan-400", "font-bold");
+        }
+      });
+    });
+  });
+</script>
+
+
+<style>
+  html {
+    scroll-behavior: smooth;
+  }
+  html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  @media (max-width: 768px) {
+    body {
+      background-size: contain;
+    }
+  }
+  .dark {
+    background: linear-gradient(to right, #0f172a, #1e293b);
+    color: white;
+  }
+  .light {
+    background: linear-gradient(to right, #f0faff, #dbeafe);
+    color: #1e293b;
+  }
+</style>
+
+
+  <!-- Toggle Script -->
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
+</nav>
+
+<!-- 👋 Hero Section -->
+<!-- Hero -->
+<header class="min-h-screen flex flex-col justify-center items-center text-center px-4 pt-28 fade-in">
+  <!-- Profile Image -->
+  <img src="AA.jpg" alt="Profile" class="w-32 h-32 rounded-full border-4 border-cyan-400 mb-4 shadow-lg object-cover" />
+
+<h1 class="text-3xl md:text-5xl font-bold mb-2 text-white" style="font-family: 'Poppins', sans-serif;">
+    Hi there,
+</h1>
+
+<h2 class="text-2xl md:text-3xl font-semibold mb-2">
+  I'm <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 drop-shadow-lg">
+    Akshay Kumar Reddy Polu
+  </span>
+</h2>
+
+ 
+<!-- Subtitle -->
+<p class="text-cyan-200 text-lg font-medium mt-1">
+  Innovative Software Developer from India, dedicated to refining his craft and engineering breakthrough solutions for tomorrow's challenges. 
+</p>
+
+<!-- Enhanced 5x5 Skill Carousel with Blinking Animation -->
+<div class="relative w-full overflow-hidden py-4">
+  <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4 justify-items-center text-cyan-300 text-sm">
+    <div class="flex flex-col items-center skill-blink" style="animation-delay: 0s">
+      <i class="fab fa-python text-3xl"></i>
+      <span class="mt-1">Python</span>
+    </div>
+    <div class="flex flex-col items-center skill-blink" style="animation-delay: 0.2s">
+      <i class="fab fa-java text-3xl"></i>
+      <span class="mt-1">Java</span>
+    </div>
+    <div class="flex flex-col items-center skill-blink" style="animation-delay: 0.4s">
+      <i class="fab fa-js text-3xl"></i>
+      <span class="mt-1">JavaScript</span>
+    </div>
+    <div class="flex flex-col items-center skill-blink" style="animation-delay: 0.6s">
+      <i class="fab fa-react text-3xl"></i>
+      <span class="mt-1">ReactJS</span>
+    </div>
+    <div class="flex flex-col items-center skill-blink" style="animation-delay: 0.8s">
+      <i class="fab fa-html5 text-3xl"></i>
+      <span class="mt-1">HTML</span>
+    </div>
+    <div class="flex flex-col items-center skill-blink" style="animation-delay: 1s">
+      <i class="fab fa-css3-alt text-3xl"></i>
+      <span class="mt-1">CSS</span>
+    </div>
+    <div class="flex flex-col items-center skill-blink" style="animation-delay: 1.2s">
+      <i class="fas fa-wind text-3xl"></i>
+      <span class="mt-1">Tailwind</span>
+    </div>
+    <div class="flex flex-col items-center skill-blink" style="animation-delay: 1.4s">
+      <i class="fas fa-code text-3xl"></i>
+      <span class="mt-1">VS Code</span>
+    </div>
+    <div class="flex flex-col items-center skill-blink" style="animation-delay: 1.6s">
+      <i class="fab fa-github text-3xl"></i>
+      <span class="mt-1">GitHub</span>
+    </div>
+    <div class="flex flex-col items-center skill-blink" style="animation-delay: 1.8s">
+      <i class="fas fa-database text-3xl"></i>
+      <span class="mt-1">MySQL</span>
+    </div>
+  </div>
+</div>
+
+<style>
+@keyframes blink {
+  0%, 100% { opacity: 0.3; transform: scale(0.95); }
+  50% { opacity: 1; transform: scale(1); }
+}
+.skill-blink {
+  animation: blink 1.5s ease-in-out infinite;
+  animation-fill-mode: both;
+}
+</style>
+
+
+  <!-- Social Icons -->
+ <!-- Social Icons with Click Effects -->
+  <div class="flex justify-center gap-6 text-2xl text-cyan-400 mt-6">
+    <a href="https://www.linkedin.com/in/akshay-kumar-reddy-polu-786925293" target="_blank" aria-label="LinkedIn" class="icon-click-effect">
+      <i class="fab fa-linkedin"></i>
+    </a>
+    <a href="https://github.com/akshayreddy2022" target="_blank" aria-label="GitHub" class="icon-click-effect">
+      <i class="fab fa-github"></i>
+    </a>
+    <a href="mailto:akshayreddy4499@gmail.com" aria-label="Email" class="icon-click-effect">
+      <i class="fas fa-envelope"></i>
+    </a>
+  </div>
+</div>
+
+<style>
+@keyframes blink {
+  0%, 100% { opacity: 0.3; transform: scale(0.95); }
+  50% { opacity: 1; transform: scale(1); }
+}
+.skill-blink {
+  animation: blink 1.5s ease-in-out infinite;
+  animation-fill-mode: both;
+}
+.icon-click-effect {
+  transition: transform 0.2s ease, color 0.3s;
+}
+.icon-click-effect:hover {
+  transform: scale(1.2);
+  color: #67e8f9;
+}
+.icon-click-effect:active {
+  transform: scale(0.9);
+  color: #22d3ee;
+}
+</style>
+
+</header>
+
+</style>
+</header>
+
+
+<!-- 👤 About Section -->
+<section id="about" class="glass max-w-4xl mx-auto my-16 p-6 rounded-lg animate-fade-in slide-left transition-all duration-700">
+  <h2 class="text-3xl font-bold text-cyan-400 mb-6 flex items-center">
+    <i class="fas fa-user-circle mr-3 text-cyan-300 animate-bounce"></i>About Me
+  </h2>
+
+  <!-- Introduction -->
+  <p class="text-gray-300 leading-relaxed mb-4">
+    I’m <span class="text-cyan-300 font-semibold">Akshay Kumar Reddy Polu</span>, a dedicated and innovative Computer Science student passionate about building full-stack Java applications and applying machine learning to solve real-world challenges.
+  </p>
+
+  <!-- Interests -->
+  <p class="text-gray-300 leading-relaxed mb-4">
+    I thrive in collaborative environments and constantly explore new technologies to expand my skill set.
+  </p>
+
+  <!-- Animated Bullet Points -->
+  <ul class="list-disc text-gray-300 ml-6 space-y-2">
+    <li class="hover:text-cyan-400 transition duration-300">
+      <i class="fas fa-brain text-cyan-400 mr-2"></i> Passionate about emerging technologies
+    </li>
+    <li class="hover:text-cyan-400 transition duration-300">
+      <i class="fas fa-lightbulb text-cyan-400 mr-2"></i> Enjoy problem-solving and logical thinking
+    </li>
+    <li class="hover:text-cyan-400 transition duration-300">
+      <i class="fas fa-users text-cyan-400 mr-2"></i> Team-oriented with strong communication skills
+    </li>
+    <li class="hover:text-cyan-400 transition duration-300">
+      <i class="fas fa-rocket text-cyan-400 mr-2"></i> Eager to contribute to impactful projects
+    </li>
+  </ul>
+</section>
+
+
+<!-- 🧠 Skills -->
+<section id="skills" class="glass max-w-4xl mx-auto my-16 p-6 rounded-lg">
+  <h2 class="text-2xl font-bold text-cyan-400 mb-8 text-center">
+    <i class="fas fa-tools mr-2"></i>Skills
+  </h2>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-gray-300 text-sm">
+
+    <!-- Languages -->
+    <div class="scroll-zoom bg-black/30 backdrop-blur p-6 rounded-lg shadow-md border border-cyan-800">
+      <h3 class="text-lg font-semibold text-cyan-300 mb-3"><i class="fas fa-code mr-2"></i>Languages</h3>
+      <ul class="space-y-2">
+        <li><i class="fab fa-java text-yellow-400 mr-2"></i>Java</li>
+        <li><i class="fab fa-python text-blue-400 mr-2"></i>Python</li>
+      </ul>
+    </div>
+
+    <!-- Web Development -->
+    <div class="scroll-zoom bg-black/30 backdrop-blur p-6 rounded-lg shadow-md border border-cyan-800">
+      <h3 class="text-lg font-semibold text-cyan-300 mb-3"><i class="fas fa-laptop-code mr-2"></i>Web Development</h3>
+      <ul class="space-y-2">
+        <li><i class="fab fa-html5 text-orange-500 mr-2"></i>HTML</li>
+        <li><i class="fab fa-css3-alt text-blue-500 mr-2"></i>CSS</li>
+        <li><i class="fab fa-js text-yellow-300 mr-2"></i>JavaScript</li>
+        <li><i class="fab fa-react text-cyan-300 mr-2"></i>React Js</li>
+      </ul>
+    </div>
+
+    <!-- Tools & Cloud -->
+    <div class="scroll-zoom bg-black/30 backdrop-blur p-6 rounded-lg shadow-md border border-cyan-800">
+      <h3 class="text-lg font-semibold text-cyan-300 mb-3"><i class="fas fa-cloud mr-2"></i>Tools & Cloud</h3>
+      <ul class="space-y-2">
+        <li><i class="fas fa-database text-green-400 mr-2"></i>MySQL</li>
+        <li><i class="fab fa-github-alt text-red-400 mr-2"></i>GitHub</li>
+        <li><i class="fab fa-aws text-orange-400 mr-2"></i>AWS Cloud</li>
+      </ul>
+    </div>
+
+    <!-- Productivity -->
+    <div class="scroll-zoom bg-black/30 backdrop-blur p-6 rounded-lg shadow-md border border-cyan-800">
+      <h3 class="text-lg font-semibold text-cyan-300 mb-3"><i class="fas fa-desktop mr-2"></i>Productivity</h3>
+      <ul class="space-y-2">
+        <li><i class="fas fa-file-word text-blue-400 mr-2"></i>Microsoft Word</li>
+        <li><i class="fas fa-file-excel text-green-400 mr-2"></i>Microsoft Excel</li>
+        <li><i class="fas fa-file-powerpoint text-orange-500 mr-2"></i>PowerPoint</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+
+<section id="education" class="glass max-w-4xl mx-auto my-16 p-8 rounded-lg fade-in-up">
+  <h2 class="text-3xl font-bold text-cyan-400 mb-8 flex items-center">
+    <i class="fas fa-graduation-cap mr-3 animate-bounce"></i>Education
+  </h2>
+
+  <ul class="space-y-8 text-gray-300">
+
+    <!-- B.Tech -->
+    <li class="group flex items-start gap-5 bg-black/30 backdrop-blur-md p-4 rounded-xl shadow-lg border-l-4 border-cyan-500 hover:scale-[1.02] transition-transform duration-500 hover:border-gradient-to-r from-cyan-400 to-blue-500 animate-slide-up delay-[200ms]">
+      <i class="fas fa-university text-cyan-400 text-2xl mt-1"></i>
+      <div>
+        <p class="text-lg font-semibold text-white group-hover:text-cyan-300 transition">B.Tech – Computer Science & Engineering</p>
+        <p class="text-sm">Siddartha Engineering College, Tirupati <span class="text-cyan-300">(2021–2025)</span></p>
+        <p class="text-sm text-cyan-400">CGPA: 7.8</p>
+      </div>
+    </li>
+
+    <!-- Intermediate -->
+    <li class="group flex items-start gap-5 bg-black/30 backdrop-blur-md p-4 rounded-xl shadow-lg border-l-4 border-cyan-500 hover:scale-[1.02] transition-transform duration-500 animate-slide-up delay-[400ms]">
+      <i class="fas fa-school text-cyan-400 text-2xl mt-1"></i>
+      <div>
+        <p class="text-lg font-semibold text-white group-hover:text-cyan-300 transition">Intermediate (10+2)</p>
+        <p class="text-sm">Sri Gayatri Junior College, Hyderabad <span class="text-cyan-300">(2019–2021)</span></p>
+        <p class="text-sm text-cyan-400">Percentage: 77.2%</p>
+      </div>
+    </li>
+
+    <!-- SSC -->
+    <li class="group flex items-start gap-5 bg-black/30 backdrop-blur-md p-4 rounded-xl shadow-lg border-l-4 border-cyan-500 hover:scale-[1.02] transition-transform duration-500 animate-slide-up delay-[600ms]">
+      <i class="fas fa-book-reader text-cyan-400 text-2xl mt-1"></i>
+      <div>
+        <p class="text-lg font-semibold text-white group-hover:text-cyan-300 transition">SSC (10th Grade)</p>
+        <p class="text-sm">Sri Vengamamba E.M. High School, Porumamilla <span class="text-cyan-300">(2019)</span></p>
+        <p class="text-sm text-cyan-400">CGPA: 9.7</p>
+      </div>
+    </li>
+
+  </ul>
+</section>
+
+
+
+
+<!-- 💼 Experience -->
+<section id="experience" class="glass max-w-4xl mx-auto my-16 p-8 rounded-lg slide-up">
+  <h2 class="text-3xl font-bold text-cyan-400 mb-8 flex items-center">
+    <i class="fas fa-briefcase mr-3"></i>Experience
+  </h2>
+
+  <ul class="space-y-8 text-gray-300">
+    <li class="flex items-start gap-5 bg-black/30 backdrop-blur-md p-4 rounded-lg shadow-md border border-cyan-800">
+      <i class="fas fa-laptop-code text-cyan-400 text-2xl mt-1"></i>
+      <div>
+        <p class="text-lg font-semibold text-white">Full Stack Java Intern – SkillDzire</p>
+        <p class="text-sm text-cyan-300 mb-2">   June 2024</p>
+        <ul class="list-disc ml-4 text-sm space-y-1">
+          <li>Built full-stack applications using Spring Boot and Angular/React.</li>
+          <li>Integrated RESTful APIs and microservices with MySQL and PostgreSQL databases.</li>
+          <li>Deployed scalable applications to cloud environments, focusing on performance optimization.</li>
+          <li>Collaborated with teams to enhance app reliability and maintainability through clean architecture.</li>
+        </ul>
+      </div>
+    </li>
+  </ul>
+</section>
+
+
+
+<!-- 🧪 Projects -->
+ 
+<section id="projects" class="glass max-w-4xl mx-auto my-16 p-8 rounded-lg fade-in">
+  <h2 class="text-3xl font-bold text-cyan-400 mb-8 flex items-center">
+    <i class="fas fa-project-diagram mr-3"></i>Projects
+  </h2>
+
+  <ul class="space-y-8 text-gray-300">
+    <li class="flex items-start gap-5 bg-black/30 backdrop-blur-md p-4 rounded-lg shadow-md border border-cyan-800">
+      <i class="fas fa-shield-alt text-cyan-400 text-2xl mt-1"></i>
+      <div>
+        <p class="text-lg font-semibold text-white">Credit Card Fraud Detection</p>
+        <ul class="list-disc ml-4 text-sm space-y-1">
+          <li>Developed using Python, TensorFlow, and scikit-learn.</li>
+          <li>Handled data preprocessing, feature engineering, anomaly detection.</li>
+          <li>Designed a real-time risk assessment pipeline.</li>
+          <li>Achieved 94% precision on unseen transactions.</li>
+        </ul>
+      </div>
+    </li>
+  </ul>
+</section>
+<!-- 🌟 Soft Skills -->
+<section id="softskills" class="glass max-w-4xl mx-auto my-16 p-8 rounded-lg fade-in">
+  <h2 class="text-3xl font-bold text-cyan-400 mb-8 flex items-center">
+    <i class="fas fa-heart mr-3"></i>Soft Skills & Hobbies
+  </h2>
+  <div class="flex flex-col gap-4 text-gray-300">
+    <div class="flex items-start gap-4">
+      <i class="fas fa-lightbulb text-cyan-400 text-xl"></i>
+      <span>Problem-solving • Teamwork • Quick learning • Logical thinking • Communication</span>
+    </div>
+    <div class="flex items-start gap-4">
+      <i class="fas fa-gamepad text-cyan-400 text-xl"></i>
+      <span>Hobbies: Learning new technologies, Playing badminton, Cooking, Listening to music</span>
+    </div>
+  </div>
+</section>
+
+<!-- ✉️ Contact Section -->
+<section id="contact" class="glass max-w-4xl mx-auto p-8 mt-16 rounded-lg slide-down">
+  <h2 class="text-3xl font-bold text-cyan-400 mb-8 flex items-center">
+    <i class="fas fa-envelope-open-text mr-3"></i>Get in Touch
+  </h2>
+
+  <form action="#" method="POST" class="grid gap-6">
+    
+    <!-- Name -->
+    <div class="relative">
+      <i class="fas fa-user absolute top-3 left-3 text-cyan-400"></i>
+      <input type="text" id="name" name="name" required
+        placeholder="Your Name"
+        class="pl-10 w-full p-3 rounded bg-white/10 border border-cyan-700 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 transition duration-300"/>
+    </div>
+
+    <!-- Email -->
+    <div class="relative">
+      <i class="fas fa-envelope absolute top-3 left-3 text-cyan-400"></i>
+      <input type="email" id="email" name="email" required
+        placeholder="Email Address"
+        class="pl-10 w-full p-3 rounded bg-white/10 border border-cyan-700 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 transition duration-300"/>
+    </div>
+
+    <!-- Message -->
+    <div class="relative">
+      <i class="fas fa-comment-dots absolute top-3 left-3 text-cyan-400"></i>
+      <textarea id="message" name="message" rows="5" required
+        placeholder="Your Message"
+        class="pl-10 w-full p-3 rounded bg-white/10 border border-cyan-700 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 transition duration-300"></textarea>
+    </div>
+
+    <!-- Submit Button -->
+    <div class="text-center">
+      <button type="submit"
+        class="inline-flex items-center gap-2 bg-cyan-400 text-black font-semibold px-6 py-2 rounded hover:bg-cyan-300 transition-all shadow hover:scale-105">
+        <i class="fas fa-paper-plane"></i> Send Message
+      </button>
+    </div>
+  </form>
+</section>
+
+
+<!-- Resume Modal Section -->
+<div class="text-center my-10">
+  <button onclick="document.getElementById('resumeModal').classList.remove('hidden')" class="btn px-6 py-2 bg-cyan-400 text-black font-semibold rounded inline-flex items-center">
+    <i class="fas fa-file-alt mr-2"></i> View Resume
+  </button>
+</div>
+
+<div id="resumeModal" class="hidden fixed inset-0 bg-black bg-opacity-60 flex justify-center items-center z-50">
+  <div class="bg-white text-black max-w-4xl w-full p-6 rounded-lg relative">
+    <button onclick="document.getElementById('resumeModal').classList.add('hidden')" class="absolute top-2 right-4 text-black text-xl">
+      <i class="fas fa-times"></i>
+    </button>
+    <h2 class="text-2xl font-semibold mb-4 flex items-center">
+      <i class="fas fa-file-alt text-cyan-400 mr-2"></i>My Resume
+    </h2>
+    <iframe src="resume.pdf" class="w-full h-96 mb-4 border border-cyan-400 rounded" frameborder="0"></iframe>
+    <a href="resume.pdf" download class="inline-block bg-cyan-400 px-4 py-2 rounded text-black font-semibold">
+      <i class="fas fa-download mr-2"></i>Download Resume
+    </a>
+  </div>
+</div>
+
+
+<!-- 🦶 Footer -->
+<footer class="relative text-center py-10 mt-20 border-t border-white/10 bg-gradient-to-r from-black via-gray-900 to-black animate-fade-in-up overflow-hidden">
+
+  <!-- Attribution -->
+  <p class="text-gray-400 text-sm mb-2">
+    Made with <i class="fas fa-heart text-red-500 mx-1 animate-ping"></i> by 
+    <span class="text-cyan-300 font-semibold">Akshay Reddy</span>
+  </p>
+
+  <!-- Copyright -->
+  <p class="text-gray-400 text-xs mb-4">
+    &copy; 2025 Akshay Kumar Reddy Polu. All rights reserved. | SEAT-2025.
+  </p>
+
+  <!-- Social Icons -->
+  <div class="flex justify-center gap-6 text-xl mb-6">
+    <a href="https://www.linkedin.com/in/akshay-kumar-reddy-polu-786925293" target="_blank" class="text-cyan-400 hover:text-white transition transform hover:scale-110">
+      <i class="fab fa-linkedin"></i>
+    </a>
+    <a href="https://github.com/akshayreddy2022" target="_blank" class="text-cyan-400 hover:text-white transition transform hover:scale-110">
+      <i class="fab fa-github"></i>
+    </a>
+    <a href="mailto:akshayreddy4499@gmail.com" class="text-cyan-400 hover:text-white transition transform hover:scale-110">
+      <i class="fas fa-envelope"></i>
+    </a>
+  </div>
+
+  <!-- Quote -->
+  <p class="text-cyan-300 italic text-sm animate-pulse">
+    “Turning coffee into code, one line at a time.”
+  </p>
+
+  <!-- Logo Image with Larger Size -->
+  <img 
+    src="Logo.png" 
+    alt="Akshay Reddy" 
+    class="absolute bottom-4 right-6 w-24 h-24 rounded-full border-2 border-cyan-400 shadow-lg animate-spin-slow hidden sm:block"
+  />
+</footer>
+<style>
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.animate-fade-in-up {
+  animation: fade-in-up 1.2s ease-out;
+}
+
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.animate-spin-slow {
+  animation: spin-slow 8s linear infinite;
+}
+</style>
+
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+      }
+    });
+  });
+
+  document.querySelectorAll(".scroll-zoom").forEach(el => observer.observe(el));
+</script>
+
